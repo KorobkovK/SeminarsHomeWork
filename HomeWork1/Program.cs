@@ -77,7 +77,6 @@ if(n % 2 == 0)
 }
 if(n % 2 > 0)
 {
-    current = 0 + 2;
     while(current <= n && current > 0)
     {
     Console.Write(current + " ");
