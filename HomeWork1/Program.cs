@@ -77,10 +77,10 @@ if(n % 2 == 0)
 }
 if(n % 2 > 0)
 {
-    current = n - 1;
+    current = 0 + 2;
     while(current <= n && current > 0)
     {
     Console.Write(current + " ");
-    current = current - 2;
+    current = current + 2;
     }
 }
