@@ -66,7 +66,7 @@ int n, current;
 Console.Write("Введите любое целое положительное число  ");
 n = Convert.ToInt32(Console.ReadLine());
 
-current = 0 + 2;
+current = 2;
     while(current <= n && current > 0)
     {
     Console.Write(current + " ");
