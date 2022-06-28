@@ -66,13 +66,13 @@ int n, current;
 Console.Write("Введите любое целое положительное число  ");
 n = Convert.ToInt32(Console.ReadLine());
 
-current = 0 + n;
+current = 0 + 2;
 if(n % 2 == 0)
 {
     while(current <= n && current > 0)
     {
     Console.Write(current + " ");
-    current = current - 2;
+    current = current + 2;
     }
 }
 if(n % 2 > 0)
