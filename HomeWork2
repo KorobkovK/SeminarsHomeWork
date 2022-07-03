@@ -1,14 +1,18 @@
 //Задача 10: Напишите программу, которая принимает
 // на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
 /*
+
+
 int SecondNumber()
 {
     int num;
     Console.Write("Введите любое целое трёхзначное число ");
     num = Convert.ToInt32(Console.ReadLine());
+    
     int des = num / 10;   //Отсекаем один первый разряд - первое число
     int ed = des % 10;    //Остаток от деления на десять - второе число
     int result = ed;
+    
     return result;
 }
 
@@ -16,46 +20,53 @@ int number = SecondNumber();
 Console.WriteLine("Искомое число " + number);
 
 
+
+
 //Задача 15: Напишите программу, которая принимает на вход цифру, 
-//обозначающую день недели, и проверяет, является ли этот день выходным
+//обозначающую день недели, и проверяет, является ли этот день выходным.
 
 
-int day;
+void Days()
+{
+    int day;
 
-Console.Write("Введите число недели (от 1 до 7): ");
-day = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите число недели (от 1 до 7): ");
+    day = Convert.ToInt32(Console.ReadLine());
 
-if (day < 6)
-{
-    Console.Write("  Нет");
-}
-if (day == 6)
-{
-    Console.Write("  Да");
-}
-if (day == 7)
-{
-    Console.Write("  Да");
-}
-if (day > 7 || day < 1)
-{
-    Console.Write("  Введите корректное число");
-}
+    if (day < 6)
+    {
+        Console.Write("  Нет, день будний.");
+    }
+    if (day == 6 || day == 7)
+    {
+        Console.Write("  Да, день выходной.");
+    }
+    if (day > 7 || day < 1)
+    {
+        Console.Write("  Введите корректное число");
+    }
+}  
+
+Days();
+
+
+
  
 */
 //Задача 13: Напишите программу, которая выводит третью цифру заданного числа 
 //или сообщает, что третьей цифры нет.
 
 
-
-int num;
+void ThirdNumber()
+{
+    int num;
 Console.Write("Введите целое число ");
 num = Convert.ToInt32(Console.ReadLine());
 
 
-if(num < 100)
+if (num < 100)
     {
-        Console.Write("Третьей цифры нет"); 
+        Console.Write("Третьей цифры нет.");
     }
 if(num > 99 && num < 1000)
     {
@@ -86,4 +97,28 @@ if (num > 999999 && num < 10000000)
         int result = (d % 10);
         Console.Write(result);
     } 
+if (num > 9999999 && num < 100000000)
+    {
+        int e = (num / 100000);
+        int result = (e % 10);
+        Console.Write(result);
+    }
+if (num > 99999999 && num < 1000000000)  
+    {
+        int f = (num / 1000000);
+        int result = (f % 10);
+        Console.Write(result);
+    } 
+if (num > 999999999 && num < 2147483647)
+    {
+        int g = (num / 10000000);
+        int result = (g % 10);
+        Console.Write(result);
+    }  
+}
+
+
+ThirdNumber();
+
+
        
