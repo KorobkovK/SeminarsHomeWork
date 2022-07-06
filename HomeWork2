@@ -121,4 +121,23 @@ if (num > 999999999 && num < 2147483647)
 ThirdNumber();
 
 
-       
+ // Второй вариант решения!!!!!!!!!!!!!!!!!!!!!!!!!
+
+void ThirdNumber()
+{
+    Console.WriteLine("Введите число: ");
+    int Number;                        // Введенное число пользователем
+    Number=Convert.ToInt32(Console.ReadLine());
+    string NumberCut;                  // "Усечённое" число
+    NumberCut=Convert.ToString(Number);
+    if (NumberCut.Length>2)
+    { 
+        Console.WriteLine("Третья цифра цифра - " +NumberCut[2]);
+    }
+    else
+    {
+        Console.WriteLine("Нет третьей цифры"); 
+    } 
+}
+
+ThirdNumber();      
