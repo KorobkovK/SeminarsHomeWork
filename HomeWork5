@@ -87,3 +87,25 @@ int Summa = SumOddNum(array);
 Console.Write("Sum of numbers in odd places is "  + Summa);
 
 
+// Задача 38. 
+// Задайте массив вещественных чисел.
+// Найдите разницу между максимальным и минимальным элементом массива.
+
+
+Random rnd = new Random();
+int[] array = new int[10];
+int max = 0, min = 100;
+
+for (int i = 0; i < array.Length; i++)  array[i] = rnd.Next(100);
+for (int i = 0; i < array.Length; i++)
+{
+    if (array[i] > max) max = array[i];
+    if (array[i] < min) min = array[i];
+}         
+for (int i = 0; i < array.Length; i++)
+
+Console.Write(array[i] + " ");  //выводим массив
+Console.WriteLine();
+Console.WriteLine("max: " + max);
+Console.WriteLine("min: " + min);
+Console.WriteLine("Difference between maximum and minimum elements is: " + (max - min));
